@@ -14,16 +14,15 @@ export default function LoginPage() {
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
+          //JSON object to store field values on form submission for submission to
+          //user login API endpoint.
+          const userDetails = {
+            userEmail: values.email,
 
-            //JSON object to store field values on form submission for submission to
-            //user login API endpoint.
-        const userDetails = {
-            userEmail : values.email,
-
-           userPassword : values.password
-        }
-        //call to function to submit user details
-        userLogin( userDetails );
+            userPassword: values.password,
+          };
+          //call to function to submit user details
+          userLogin(userDetails);
 
           setSubmitting(false);
         }, 400);
@@ -80,9 +79,9 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="block rounded-md shadow-lg ml-28 w-2/3 my-16 bg-blue-400"
+            className="block rounded-md shadow-lg ml-28 md:ml-48 md:w-1/3 w-2/3 my-16 bg-blue-400"
           >
-            <span className="text-md"> Submit </span>
+            <span className="text-md text-white p-2"> Submit </span>
           </button>
         </form>
       )}
