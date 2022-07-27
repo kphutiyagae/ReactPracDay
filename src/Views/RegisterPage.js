@@ -117,6 +117,7 @@ export default function RegisterPage() {
           </button>
         </form>
       )}
-    </Formik>    
+    </Formik> 
+    
   )
 }

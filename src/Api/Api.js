@@ -30,4 +30,13 @@ function getAccessTokenFromAPI(){
       
 }
 
-export {userLogin}
+//Function to process and pass data to register endpoint
+function userRegister(userDetails){}
+
+function getCategories(){
+    axios.get('https://edeaf-api-staging.azurewebsites.net/v1/admin/categories').catch( (error) => {
+        console.log(error);
+    })
+}
+
+export {userLogin, userRegister, getCategories}
