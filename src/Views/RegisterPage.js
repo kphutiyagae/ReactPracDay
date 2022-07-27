@@ -45,7 +45,7 @@ export default function RegisterPage() {
       }) => (
         <form
           onSubmit={handleSubmit}
-          className="bg-green-200 items-center p-5 w-3/4 h-3/4"
+          className="bg-green-200 items-center p-5 w-3/4 h-3/4 rounded-lg"
         >
 
         <label htmlFor="name" className="block text-sm my-8">

@@ -2,6 +2,8 @@ import React from "react";
 import { Formik } from "formik";
 import { userLogin } from "../Api/Api";
 import { validateEmailFieldLogin } from "../FormValidation/FormValidation";
+import { Link } from "react-router-dom";
+import RegisterPage from "./RegisterPage";
 
 export default function LoginPage() {
   return (
@@ -44,7 +46,7 @@ export default function LoginPage() {
       }) => (
         <form
           onSubmit={handleSubmit}
-          className="bg-green-200 items-center p-5 w-3/4 h-3/4"
+          className="items-center p-5 w-3/4 h-3/4 rounded-md shadow-lg"
         >
           <label htmlFor="email" className="block text-sm my-8 ">
             Email :{" "}
@@ -55,7 +57,7 @@ export default function LoginPage() {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.email}
-            className="bg-red-300"
+            className="outline outline-blue-200 rounded-md text-md text-center"
           />
 
           {errors.email && touched.email && errors.email}
@@ -70,7 +72,7 @@ export default function LoginPage() {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.password}
-            className="bg-blue-400 "
+            className="outline outline-blue-200 rounded-md  text-center"
           />
 
           {errors.password && touched.password && errors.password}
@@ -78,7 +80,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="block bg-red-900 w-2/3 my-8"
+            className="block rounded-md shadow-lg ml-28 w-2/3 my-16 bg-blue-400"
           >
             <span className="text-md"> Submit </span>
           </button>
